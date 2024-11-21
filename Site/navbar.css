@@ -1,0 +1,81 @@
+/* Style pour la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Style des liens de navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Style par défaut du menu burger (invisible sur grand écran) */
+.burger {
+    display: none; /* Le menu burger est caché sur grand écran */
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+/* Pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%); /* Masquer le menu par défaut */
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-active {
+        transform: translateX(0); /* Afficher le menu burger */
+    }
+
+    .burger {
+        display: block; /* Montrer le burger sur petit écran */
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+}
+/* Animation pour le burger */
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

@@ -1,0 +1,21 @@
+.card {
+    border: 1px solid #007bff; /* Couleur de bordure */
+}
+
+.card-title {
+    color: #007bff; /* Couleur du titre */
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    margin: 0;
+    color : white;
+}
+
+h1 {
+    text-align: center;
+}
+#card {
+    margin-bottom: 268px;
+}

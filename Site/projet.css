@@ -1,0 +1,14 @@
+h1, h2, h3, h4 {
+    text-align: center;
+}
+h2, h3 {
+    padding-bottom: 30px;
+}
+
+h4 {
+    padding-bottom: 15px;
+}
+
+#card {
+    padding-bottom: 144px;
+}
